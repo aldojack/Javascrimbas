@@ -1,0 +1,27 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <p id="greeting"><span class="bell">🔔</span> Jingle all the way! <span class="bell">🔔</span></p>
+            <div class="btn-container">
+                <button class="play-btn" id="play-btn">
+                    <span class="material-icons-outlined">play_arrow</span></button>
+                <button class="pause-btn" id="pause-btn">
+                    <span class="material-icons-outlined">pause</span>
+                </button>                 
+                </button>
+                <button class="stop-btn" id="stop-btn">
+                    <span class="material-icons-outlined">stop</span></button>                
+                </button>
+                <input type="range" class="volume-btn" id="volume-btn" min="0" max="1" value="0.5" step="0.1">
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

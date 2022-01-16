@@ -1,0 +1,103 @@
+:root {
+  --wine-red: #C7375F;
+  --bright-red: #D42D2F;
+  --dark-green: #344D2F;
+  --light-green: #77A047;
+  --gold: #FAC57D;
+  --snow: #F0F4F7;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: var(--snow);
+    background-color: var(--bright-red);
+}
+
+.checklist {
+    position: relative;
+    background: var(--snow);
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    display: flex;
+    gap: 1em;
+    font-weight: bold;
+    justify-content: center;
+    align-items:  flex-start;
+    flex-direction: column;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 5ch;
+    padding: 1em 2em;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container label {
+    cursor: pointer;
+    display: flex;
+}
+
+.checkbox-container input[type='checkbox'] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-container input[type='checkbox']:checked + label::before {
+    content: '\002714';
+    background-color: var(--bright-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.checkbox-container label::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    border-radius: .15em;
+    margin-right: .5em;
+    border: .05em solid black;
+}
+
+.checkbox-container label:hover::before,
+.checkbox-container input[type='checkbox']:hover + label::before {
+    background-color: var(--wine-red);
+}
+
+
+
+
+
+input[type=checkbox]:checked + label.strikethrough span{
+  text-decoration: line-through;
+  font-weight: normal;
+}
+
+
+/* Task:
+- Write the CSS to create custom checkboxes for our shopping list.
+
+Stretch goals: 
+- Add a different random check for each item.
+- Use JavaScript to match the custom check to the item listed, e.g. socks would have socks as the checkmark. */
